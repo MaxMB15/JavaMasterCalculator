@@ -11,7 +11,7 @@ public class CalcMain {
 	
 	//test
 	
-	
+	//test good
 	public CalcMain(){
 		//init frame
 		frame = new JFrame(CONSTANTS.progName);
