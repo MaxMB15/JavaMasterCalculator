@@ -1,22 +1,27 @@
  import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+import java.awt.geom.Point2D;
 
 import javax.swing.*;
 
 public class CalcMain {
 	
 	private JFrame frame = null;
+	private Rectangle screenBounds = null;
+	private Point2D.Float screenRatio = null;
 	
 	
+
+
 	
-	
-	//test
-	
-	//test good
 	public CalcMain(){
 		//init frame
 		frame = new JFrame(CONSTANTS.progName);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setBounds(GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds());
+		screenBounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
+		screenRatio = new Point2D.Float(screenBounds.width/1920.f,screenBounds.height/1080.f);
+		frame.setSize(normX(480), normY(600));
+		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 	}
 	
@@ -27,7 +32,12 @@ public class CalcMain {
 	
 	
 	
-	
+	private int normX(int x){
+		return (int)(x*screenRatio.x);
+	}
+	private int normY(int y){
+		return (int)(y*screenRatio.y);
+	}
 	public static void main(String[] args){
 		new CalcMain();
 	}
