@@ -11,9 +11,13 @@ public class DataEntry extends JComponent{
 		myPos = Position;
 		mySize = Size;
 		myRad = Radius;
+		this.setLocation(myPos);
+		this.setSize(Size.x, Size.y);
 	}
-	public void paint(Graphics g){
+	@Override
+	protected void paintComponent(Graphics g){
+		super.paintComponent(g);
 		g.setColor(Color.BLACK);
-		g.drawRoundRect(myPos.x, myPos.y, mySize.x, mySize.y, myRad, myRad);
+		g.drawRoundRect(0, 0, mySize.x-1, mySize.y-1, myRad, myRad);
 	}
 }

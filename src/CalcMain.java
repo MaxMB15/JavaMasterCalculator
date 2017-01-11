@@ -29,7 +29,9 @@ public class CalcMain {
 		frame.setSize(normX(480), normY(600));
 		frame.setLocationRelativeTo(null);
 		frame.setContentPane(pane);
-		pane.add(new DataEntry(new Point(30,30),new Point(70,20), 3));
+		pane.setLayout(null);
+		pane.add(new DataEntry(new Point(30,30),new Point(30,20), 10));
+		pane.add(new JLabel("Test"));
 		frame.setVisible(true);
 	}
 	
