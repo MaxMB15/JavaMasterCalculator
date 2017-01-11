@@ -30,8 +30,7 @@ public class CalcMain {
 		frame.setLocationRelativeTo(null);
 		frame.setContentPane(pane);
 		pane.setLayout(null);
-		pane.add(new DataEntry(new Point(30,30),new Point(30,20), 10));
-		pane.add(new JLabel("Test"));
+		pane.add(new DataEntry(new Point(40,30),new Point(120,60)));
 		frame.setVisible(true);
 	}
 	
