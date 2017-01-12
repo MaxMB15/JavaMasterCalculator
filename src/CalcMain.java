@@ -22,15 +22,19 @@ public class CalcMain {
 	public CalcMain(){
 		//init frame
 		frame = new JFrame(CONSTANTS.progName);
-		pane = new JPanel();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		screenBounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
 		screenRatio = new Point2D.Float(screenBounds.width/1920.f,screenBounds.height/1080.f);
 		frame.setSize(normX(480), normY(600));
 		frame.setLocationRelativeTo(null);
-		frame.setContentPane(pane);
+
+		
+		int paddingX = normX(100);
+		pane = new JPanel();
+		
 		pane.setLayout(null);
-		pane.add(new DataEntry(new Point(40,30),new Point(120,60)));
+		pane.add(new DataEntry(new Point(paddingX,30),new Point(frame.getWidth()-paddingX*2,60)));
+		frame.setContentPane(pane);
 		frame.setVisible(true);
 	}
 	
