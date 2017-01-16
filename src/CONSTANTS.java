@@ -10,7 +10,7 @@ public class CONSTANTS {
 		Color cTemp = null;
 		for(int x = 0; x<bi.getWidth();x++){
 			for(int y = 0;y<bi.getHeight();y++){
-				cTemp = new Color(bi.getRGB(x, y));
+				cTemp = new Color(bi.getRGB(x, y),true);
 				cTemp = new Color((int)(cTemp.getRed()*(c.getRed()/255f)),
 						(int)(cTemp.getGreen()*(c.getGreen()/255f)),
 						(int)(cTemp.getBlue()*(c.getBlue()/255f)),

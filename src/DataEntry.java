@@ -11,6 +11,7 @@ import javax.swing.JComponent;
 public class DataEntry extends JComponent{
 	private Point myPos,mySize = null;
 	private BufferedImage xImage = null;
+	private Color keyColor = new Color(143, 202, 232);
 	
 	public DataEntry(Point Position, Point Size){
 		myPos = Position;
@@ -18,7 +19,7 @@ public class DataEntry extends JComponent{
 		this.setLocation(myPos);
 		this.setSize(Size.x, Size.y);
 		try {
-			xImage = CONSTANTS.changeColor(new Color(.5f,0,0), ImageIO.read(new File("src/Resources/X.png")));
+			xImage = CONSTANTS.changeColor(keyColor, ImageIO.read(new File("src/Resources/X.png")));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -28,7 +29,7 @@ public class DataEntry extends JComponent{
 	@Override
 	protected void paintComponent(Graphics g){
 		super.paintComponent(g);
-		g.setColor(new Color(143, 202, 232));
+		g.setColor(keyColor);
 		g.fillRect(0, 0, mySize.x, mySize.y);
 		g.setColor(Color.white);
 		g.fillRect(mySize.x/4, 2, (3*(mySize.x/4))-2, mySize.y-4);
