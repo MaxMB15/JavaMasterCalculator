@@ -29,7 +29,7 @@ public class CalcMain {
 		frame.setLocationRelativeTo(null);
 
 		
-		int paddingX = normX(100);
+		int paddingX = normX(40);
 		pane = new JPanel();
 		
 		pane.setLayout(null);
