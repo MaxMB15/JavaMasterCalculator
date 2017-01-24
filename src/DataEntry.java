@@ -19,7 +19,7 @@ public class DataEntry extends JComponent{
 		this.setLocation(myPos);
 		this.setSize(Size.x, Size.y);
 		try {
-			xImage = CONSTANTS.changeColor(keyColor, ImageIO.read(new File("src/Resources/X.png")));
+			xImage = CONSTANTS.changeColor(new Color(keyColor.getRed()+20,keyColor.getGreen()+20,keyColor.getBlue()+20), ImageIO.read(new File("src/Resources/X.png")));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -33,9 +33,9 @@ public class DataEntry extends JComponent{
 		g.fillRect(0, 0, mySize.x, mySize.y);
 		g.setColor(Color.white);
 		g.fillRect(mySize.x/4, 2, (3*(mySize.x/4))-2, mySize.y-4);
-		g.setColor(new Color(163, 222, 252));
+		g.setColor(new Color(keyColor.getRed()+20, keyColor.getGreen()+20, keyColor.getBlue()+20));
 		g.drawRect(0, 0, mySize.x, mySize.y);
-		g.drawImage(xImage,0, 0, mySize.x/4, mySize.y, null);
+		g.drawImage(xImage,mySize.x/16, mySize.y/4, mySize.x/8, mySize.y/2, null);
 		
 	}
 }
