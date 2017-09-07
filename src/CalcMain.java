@@ -1,5 +1,3 @@
- import java.awt.Color;
-import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -8,7 +6,6 @@ import java.awt.event.ComponentListener;
 import java.awt.geom.Point2D;
 
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 
 public class CalcMain {
 	
@@ -18,8 +15,6 @@ public class CalcMain {
 	private Point2D.Float screenRatio = null;
 	
 	
-
-
 	
 	public CalcMain(){
 		//init frame
@@ -65,8 +60,6 @@ public class CalcMain {
 		});
 		frame.setVisible(true);
 	}
-	
-	
 	
 	
 	
