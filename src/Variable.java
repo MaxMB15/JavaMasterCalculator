@@ -1,14 +1,23 @@
 
 public class Variable {
-	Character var = null;
-	float degree = 1;
+	//Attributes
+	private Character variableCharacter = null;
+	public int magnitude = 1;
 	
-	public Variable(Character c, float degree ) {
-		if(!Character.isAlphabetic(c)) {
-			System.out.println("ERROR! Variable is not Alphabetic");
-			System.exit(1);
+	//Constructor
+	private Variable() {};
+	public Variable(char c) {
+		if(Character.isAlphabetic(c)) {
+			variableCharacter = c;
 		}
-		var = c;
-		this.degree = degree;
+		else {
+			//If not a valid char, throw an exception
+			try {
+				throw new Exception("Not a valid variable character");
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.exit(1);
+			}
+		}
 	}
 }

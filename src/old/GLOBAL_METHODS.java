@@ -1,3 +1,4 @@
+package old;
 
 public class GLOBAL_METHODS {
 	public static Polynomial decode(String s) {
