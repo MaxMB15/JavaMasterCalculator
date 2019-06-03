@@ -8,11 +8,13 @@ import java.util.ArrayList;
  */
 public class Term {
 	//Attributes
-	public ArrayList<Group> groups = null;
+	public Number scaler = null;
+	public ArrayList<Variable> variables = null;
 	
 	//Constructor
 	private Term() {};
-	public Term(ArrayList<Group> groups) {
-		this.groups = groups; //MIGHT HAVE TO MAKE A DEEP COPY
+	public Term(Number scaler, ArrayList<Variable> variables) {
+		this.scaler = scaler;
+		this.variables = variables; //MIGHT HAVE TO MAKE A DEEP COPY
 	}
 }
