@@ -7,7 +7,10 @@
 public class Operator {
 	//Methods
 	//Single
-	public static Term add(Term t1, Term t2) {	//addition
+	public static Term add(Term t1, Term t2) {	//addition		//EXAMPLE: "4x+4y"
+		return null;
+	}
+	public static Expression add(Term t1, Expression t2) {	//addition		//EXAMPLE: "7x+(4y+4)"
 		return null;
 	}
 	public static Term sub(Term t1, Term t2) {	//subtraction

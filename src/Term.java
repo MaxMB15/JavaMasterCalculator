@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * A Term is a collection of Groups
+ * A Term is a collection of variables and a scaler
  * 
  * @author maxboksem
  *
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Term {
 	//Attributes
 	public Number scaler = null;
-	public ArrayList<Variable> variables = null;
+	public ArrayList<Variable> variables = new ArrayList<Variable>();
 	
 	//Constructor
 	private Term() {};
