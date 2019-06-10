@@ -1,7 +1,7 @@
 
 public class Variable {
 	//Attributes
-	private Character variableCharacter = null;
+	public Character variableCharacter = null;
 	public int magnitude = 1;
 	
 	//Constructor
@@ -19,5 +19,13 @@ public class Variable {
 				System.exit(1);
 			}
 		}
+	}
+	
+	//Methods
+	public boolean equals(Variable var) {			//Checks if variable is equal to the one given
+		if(variableCharacter.equals(var.variableCharacter) && magnitude == var.magnitude) {
+			return true;
+		}
+		return false;
 	}
 }
