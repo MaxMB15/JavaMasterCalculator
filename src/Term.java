@@ -41,4 +41,18 @@ public class Term {
 		return false;		//If there still remains variable in copy
 		
 	}
+	/**
+	 * Convert to expression
+	 * 
+	 * @return an expression version of the term
+	 */
+	public Expression toExpression() {
+		//Empty lists to fill expression
+		ArrayList<Term> termList = new ArrayList<Term>();
+		termList.add(this);
+		ArrayList<Character> opList = new ArrayList<Character>();
+		
+		//Return the new Expression
+		return new Expression(termList, opList);
+	}
 }

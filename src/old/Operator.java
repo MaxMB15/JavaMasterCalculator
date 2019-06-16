@@ -1,3 +1,4 @@
+package old;
 import java.util.ArrayList;
 
 /**
@@ -25,8 +26,11 @@ public class Operator {
 		return new Expression(termList, opList);
 	}
 	public static Expression add(Term t, Expression e) {	//addition		//EXAMPLE: "7x+(4y+4)"
-		//Make a base copy
-		Expression result = e.makeDeepCopy();
+		Expression result = e.makeDeepCopy();		//Make a base copy
+		boolean likeTerm = false;					//Check to see if term has been added
+		
+		//Look through terms to add
+		
 		
 		
 		
