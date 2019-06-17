@@ -30,10 +30,10 @@ public class ExpressionTree {
 	 * @param t
 	 */
 	private ExpressionTree(Character op, ExpressionTree left, ExpressionTree right) {
-		left = left.deepCopy();
-		right = right.deepCopy();
-		operator = new Character(op);
-		isLeaf = false;
+		this.left = left.deepCopy();
+		this.right = right.deepCopy();
+		this.operator = new Character(op);
+		this.isLeaf = false;
 	}
 	
 	private ExpressionTree() {}
@@ -89,7 +89,7 @@ public class ExpressionTree {
 		System.out.println("ExpressionTree:");
 		
 		//Print the info
-		printRL(0, 3, "ROOT: ",this);
+		printRL(0, 4, "ROOT: ",this);
 	}
 	private void printRL(int currentSpaces, int tabAmount, String prefix, ExpressionTree tree) {
 		//Print the current spaces
@@ -101,8 +101,9 @@ public class ExpressionTree {
 		if(tree.isLeaf())
 			System.out.println(indentString + prefix + tree.data.toString());
 		else {
-			printRL(currentSpaces+tabAmount, tabAmount, "L: ", tree.left);
-			printRL(currentSpaces+tabAmount, tabAmount, "R: ", tree.right);			
+			System.out.println(indentString + prefix + tree.operator.toString());
+			printRL(currentSpaces + tabAmount, tabAmount, "L: ", tree.left);
+			printRL(currentSpaces + tabAmount, tabAmount, "R: ", tree.right);			
 		}
 		
 		
