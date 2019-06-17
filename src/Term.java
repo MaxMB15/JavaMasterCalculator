@@ -46,13 +46,25 @@ public class Term {
 	 * 
 	 * @return an expression version of the term
 	 */
-	public Expression toExpression() {
-		//Empty lists to fill expression
-		ArrayList<Term> termList = new ArrayList<Term>();
-		termList.add(this);
-		ArrayList<Character> opList = new ArrayList<Character>();
-		
-		//Return the new Expression
-		return new Expression(termList, opList);
+	public ExpressionTree toExpressionTree() {
+		return new ExpressionTree(this);
+	}
+	/**
+	 * 
+	 * @return makes a deep copy of Term
+	 */
+	public Term deepCopy() {
+		return new Term(Number.makeNumber(scaler.getValue()), new ArrayList<Variable>(variables));
+	}
+	/**
+	 * @return returns string representation of the Term
+	 */
+	public String toString() {
+		//initialize a string to store all the toStrings from the variables
+		String retStr = scaler.toString();
+		//Go through the variables
+		for(Variable var : variables)
+			retStr += var.toString();
+		return retStr;
 	}
 }

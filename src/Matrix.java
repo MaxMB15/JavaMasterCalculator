@@ -8,11 +8,11 @@ import java.util.ArrayList;
  */
 public class Matrix {
 	//Attributes
-	public ArrayList<ArrayList<Expression>> matrix = null;
+	public ArrayList<ArrayList<ExpressionTree>> matrix = null;
 	
 	//Constructor
 	private Matrix() {};
-	public Matrix(ArrayList<ArrayList<Expression>> matrix) {
+	public Matrix(ArrayList<ArrayList<ExpressionTree>> matrix) {
 		this.matrix = matrix; //MIGHT HAVE TO MAKE A DEEP COPY
 	}
 	

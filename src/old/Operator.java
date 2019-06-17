@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Operator {
 	//Methods
 	//Single
-	public static Expression add(Term t1, Term t2) {	//addition		//EXAMPLE: "4x+4y"
+	/*public static Expression add(Term t1, Term t2) {	//addition		//EXAMPLE: "4x+4y"
 		//Empty lists to fill expression
 		ArrayList<Term> termList = new ArrayList<Term>();
 		ArrayList<Character> opList = new ArrayList<Character>();
@@ -67,5 +67,5 @@ public class Operator {
 	}
 	public static Term mult(Matrix t1, Matrix t2) {	//multiplication
 		return null;
-	}
+	}*/
 }

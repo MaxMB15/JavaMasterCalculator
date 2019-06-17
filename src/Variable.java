@@ -28,4 +28,12 @@ public class Variable {
 		}
 		return false;
 	}
+	
+	@Override
+	public String toString() {
+		if(magnitude != 1)
+			return variableCharacter + "^" + magnitude;
+		else
+			return "" + variableCharacter;
+	}
 }
